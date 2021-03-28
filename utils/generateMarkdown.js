@@ -10,15 +10,13 @@ function generateMarkdown(data) {
 
   - [Usage](#Usage)
 
-  - [Contributing](#Contribution Instructions)
+  - [Contributing](#Contribution-Instructions)
 
   - [License](#License)
 
   - [Testing](#Testing)
 
-  - [Github Repo](#Developer's Github)
-
-  - [Contact Info](#Contact Info)
+  - [Questions](#Questions)
 
 
   ## Installation
@@ -36,11 +34,10 @@ function generateMarkdown(data) {
   ## Testing
   ${data.test}
 
-  ## Developer's Github
-  ${data.github}
+  ## Questions
+  
+  Find me at my Github: https://github.com/${data.github} or feel free to contact me at: ${data.email}. 
 
-  ## Contact Info
-  ${data.email}
 `;
 }
 
