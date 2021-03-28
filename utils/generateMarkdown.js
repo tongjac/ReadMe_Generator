@@ -21,7 +21,6 @@ function generateMarkdown(data) {
 
   ## Contact Info
   ${data.email}
-
 `;
 }
 
