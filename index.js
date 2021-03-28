@@ -53,12 +53,12 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-  fs.appendFile(fileName, data, function (err) {
+  fs.writeFile(fileName, data, function (err) {
     if (err) {
       throw err;
     }
-    console.log("Your new README has been generated!");
   });
+  console.log("Your new README has been generated!");
 }
 
 // function to initialize program
@@ -66,13 +66,13 @@ function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
-      generateMarkdown(answers);
-      fs.writeFile("README.md", generateMarkdown(return));
+      writeToFile("README.md", generateMarkdown(answers));
     })
     .catch((error) => {
       if (error.isTtyError) {
         console.log("Prompt couldn't be rendered in the current environment");
       } else {
+        console.log(error);
         console.log(
           "Sorry, something went wrong. Please run node index.js again."
         );
