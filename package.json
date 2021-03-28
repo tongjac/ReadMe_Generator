@@ -1,5 +1,5 @@
 {
-  "name": "ReadMe_Generator",
+  "name": "README_Generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/tongjac/ReadMe_Generator.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["README", "Generator", "Inquirer"],
+  "author": "tongjac",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tongjac/ReadMe_Generator/issues"
