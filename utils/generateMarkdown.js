@@ -4,6 +4,23 @@ function generateMarkdown(data) {
   ${data.description}
   #
 
+  ## Table of Contents:
+  
+  - [Installation](#Installation)
+
+  - [Usage](#Usage)
+
+  - [Contributing](#Contribution Instructions)
+
+  - [License](#License)
+
+  - [Testing](#Testing)
+
+  - [Github Repo](#Developer's Github)
+
+  - [Contact Info](#Contact Info)
+
+
   ## Installation
   ${data.installation}
 
@@ -12,6 +29,9 @@ function generateMarkdown(data) {
 
   ## Contribution Instructions
   ${data.contribution}
+
+  ## License
+  ${data.license}
 
   ## Testing
   ${data.test}
