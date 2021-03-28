@@ -29,7 +29,7 @@ function generateMarkdown(data) {
   ${data.contribution}
 
   ## License
-  ${data.license}
+  ${data.licenseBadge}
 
   ## Testing
   ${data.test}

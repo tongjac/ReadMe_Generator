@@ -40,7 +40,7 @@ const questions = [
   {
     type: "list",
     message: "Name your license.",
-    choices: ["MIT", "APACHE", "GNU"],
+    choices: ["MIT", "APACHE", "GNU", "OPEN-SOURCE", "UNLICENSE"],
     name: "license",
   },
   {
@@ -65,11 +65,26 @@ function writeToFile(fileName, data) {
   console.log("Your new README has been generated!");
 }
 
+function getLicenseImg(input) {
+  if (input == "MIT") {
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  } else if (input == "APACHE") {
+    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  } else if (input == "GNU") {
+    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (input == "OPEN-SOURCE") {
+    return "[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)";
+  } else if (input == "UNLICENSE") {
+    return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+  }
+}
+
 // function to initialize program
 function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
+      answers.licenseBadge = getLicenseImg(answers.license);
       writeToFile("README-sample.md", generateMarkdown(answers));
     })
     .catch((error) => {
